@@ -2,8 +2,9 @@
 
 Author: Keshav Lathi
 
-A Python script that scrapes Times of India headlines using `requests` and
-Beautiful Soup, then saves them to a timestamped `.txt` file.
+A Python script that fetches current article headlines from Times of India and
+Hindustan Times, then saves them to a timestamped CSV file with the publisher,
+headline, article link, and fetch time.
 
 ## Setup
 
@@ -23,4 +24,15 @@ resolve the installed packages.
 
 ```powershell
 python newsheadlines.py
+```
+
+The script fetches both publishers each time it runs and saves the CSV in this
+project folder. If one publisher is unavailable, it reports the error and saves
+the results from the other publisher when possible. It does not run continuously
+or send alerts.
+
+## Test
+
+```powershell
+python -m unittest
 ```
